@@ -53,11 +53,9 @@ OZON_API_KEY=your_ozon_api_key
 
 ### Структура проекта
 ```
-├── bot.py              # Основной файл бота
-├── example.py          # Тестовый скрипт API
-├── .env                # Переменные окружения
-├── .env.example        # Пример конфигурации
-└── test_*.py           # Тестовые файлы
+├── ozon_bot.py               # Основной файл бота
+├── .env                      # Переменные окружения
+└── test_simple_question.py   # Тест подключения к API OZON
 ```
 
 ### API Endpoint
