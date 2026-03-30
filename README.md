@@ -1,66 +1,79 @@
-# 🤖 OZON Status Bot - Инструкция по использованию
+# Logistics Automation System (Ozon Delivery Telegram Bot)
 
-## 📋 Что делает бот
-Telegram бот для изменения статуса заказов OZON FBS на "Доставлено" через API OZON.
+System for automating delivery-related workflows and processing logistics data via Telegram interface.
 
-## � Как работает
+The project focuses on reducing manual operations when working with delivery data and providing a simple interface for interacting with external systems.
 
-### 🔸 В приватном чате
-1. **Найдите бота**: `@netizen_ozon_status_bot`
-2. **Запустите**: отправьте команду `/start`
-3. **Введите номер заказа**: например `0125046649-0022-1`
-4. **Нажмите кнопку**: "✅ Доставлено"
-5. **Получите результат**: сообщение об успехе или ошибке
-6. **При необходимости**: нажмите "📊 Показать детали" для технической информации
+---
 
+## Overview
 
-## 📱 Примеры ответов
+The system provides a Telegram-based interface for working with delivery and order data.
 
-### ✅ Успешное изменение 
-```
-✅ Статус успешно изменён на 'Доставлено'
-```
+It allows processing incoming data, transforming it into a structured format, and delivering it to users in a convenient way without direct interaction with the original system.
 
-## ⚙️ Конфигурация
+---
 
-### Файл .env
-```bash
-BOT_TOKEN=your_telegram_bot_token
-OZON_CLIENT_ID=your_ozon_client_id
-OZON_API_KEY=your_ozon_api_key
-```
+## Core Functionality
 
-## 🔧 Устранение проблем
+- processing delivery and order-related data  
+- integration with external data sources (marketplace / logistics systems)  
+- transforming raw data into structured output  
+- delivering information through Telegram interface  
+- automating routine operational tasks  
 
-### Бот не отвечает
-- Проверьте интернет соединение
-- Убедитесь, что запущен только один экземпляр бота
-- Проверьте токен бота в .env файле
+---
 
-### Ошибки API
-- Проверьте правильность OZON API ключей
-- Убедитесь, что номер заказа существует
-- Проверьте права доступа к API
+## Architecture
 
-## 📋 Коды ошибок OZON
+The system follows a simple event-driven flow:
 
-- **TRANSITION_IS_NOT_POSSIBLE**: Заказ не может быть переведен в статус "Доставлено"
-  - Заказ уже доставлен
-  - Заказ отменен
-  - Заказ еще не готов к доставке
+1. Input (Telegram messages / commands)  
+2. Request processing  
+3. Data retrieval from external sources  
+4. Data transformation  
+5. Response delivery  
 
-## 🛠️ Разработка
+---
 
-### Структура проекта
-```
-├── ozon_bot.py               # Основной файл бота
-├── .env                      # Переменные окружения
-└── test_simple_question.py   # Тест подключения к API OZON
-```
+## Tech Stack
 
-### API Endpoint
-- **URL**: `https://api-seller.ozon.ru/v2/fbs/posting/delivered`
-- **Метод**: POST
-- **Документация**: [OZON Seller API](https://docs.ozon.ru/api/seller/)
+- Node.js  
+- Telegram Bot API  
+- External integrations (delivery / marketplace data)  
 
-## ✅ Бот готов к работе!
+---
+
+## Business Value
+
+- reduces manual handling of delivery data  
+- simplifies access to operational information  
+- speeds up routine workflows  
+- minimizes human errors in data processing  
+
+---
+
+## My Role
+
+- designed system logic and data flow  
+- implemented Telegram-based interface  
+- integrated external data sources  
+- built data processing and transformation layer  
+- automated delivery-related workflows  
+
+---
+
+## Notes
+
+The project demonstrates practical experience in:
+
+- backend development  
+- system integration  
+- automation of operational processes  
+- working with real-world data flows  
+
+---
+
+## Setup
+
+See INSTALL.md
